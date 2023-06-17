@@ -1,0 +1,25 @@
+<form method="post">
+    {% csrf_token %}
+    <!-- {{ form.as_p }} -->
+    <!-- エラー文がある場合に表示する -->
+    {% if form.non_field_errors %}
+    <div class="alert alert-danger alert-text" role="alert">
+        {% for error in form.non_field_errors  %}
+            <p class="mb-0">{{error}}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <!-- エラー文がある場合に表示するend -->
+    <!-- フォームを表示 -->
+    {% for field in form %}
+    <div>
+        <p>{{ field.label_tag }}</p>
+        <p>{{ field }}</p>
+        {% if field.errors %}
+            <div>{{ field.error }}</div>
+        {% endif %}
+    </div>
+    {% endfor %}
+    <!-- フォームを表示end -->
+    <input type="submit" value="{{ submit_label }}" class="btn btn-dark">
+</form>

@@ -1,0 +1,374 @@
+{% extends 'registration/base.html'%}
+
+{% block main %}
+
+
+<h2>Aboutme</h2>
+
+<ul>
+    <li><a href="{% url 'index' %}">Homeへ</a></li>
+</ul>
+<h4>クリックすると写真の拡大と説明文が表示されます</h4>
+<div class="container">
+    <!-- １行目 -->
+    <div class="row">
+        <div  class="col-4">
+            <img data-modal="modal1" class ='modalOpen image-size' src="/media/bro1.jpg" />
+        </div>
+        <div class="col-4">
+            <img data-modal="modal2" class='modalOpen image-size' src="/media/univ2.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal3" class='modalOpen image-size' src="/media/architect2.jpg">
+        </div>
+    </div>
+    <!-- ２行目 -->
+    <div class="row">
+        <div class="col-4">
+            <img data-modal="modal4" class='modalOpen image-size' src="/media/yosakoi1.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal5" class='modalOpen image-size' src="/media/event1.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal6" class='modalOpen image-size' src="/media/eat1.jpg">
+        </div>
+    </div>
+    <!-- ３行目 -->
+    <div class="row">
+        <div class="col-4">
+            <img data-modal="modal7" class='modalOpen image-size' src="/media/bycicle5.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal8" class='modalOpen image-size' src="/media/bycicle4.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal9" class='modalOpen image-size' src="/media/bycicle3.jpg">
+        </div>
+    </div>
+    <!-- ４行目 -->
+    <div class="row">
+        <div class="col-4">
+            <img data-modal="modal10" class='modalOpen image-size' src="/media/bycicle2.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal11" class='modalOpen image-size' src="/media/bycicle1.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal12" class='modalOpen image-size' src="/media/travel1.jpg">
+        </div>
+    </div>
+    <!-- ５列目 -->
+    <div class="row">
+        <div class="col-4">
+            <img data-modal="modal13" class='modalOpen image-size' src="/media/travel4.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal14" class='modalOpen image-size' src="/media/travel3.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal15" class='modalOpen image-size' src="/media/travel2.jpg">
+        </div>
+    </div>
+    <!-- ６列目 -->
+    <div class="row">
+        <div class="col-4">
+            <img data-modal="modal16" class='modalOpen image-size' src="/media/love1.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal17" class='modalOpen image-size' src="/media/love4.jpg">
+        </div>
+        <div class="col-4">
+            <img data-modal="modal18" class='modalOpen image-size' src="/media/love3.jpg">
+        </div>
+    </div>
+    <!-- モーダル実装 -->
+    <!-- <div id="a" class="button">
+        <p>open</p>
+        <div id="easyModal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1>Great job 🎉</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <p>You've just displayed this awesome Modal Window!</p>
+                <p>Let's enjoy learning JavaScript ☺️</p>
+            </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- モーダル一覧 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>次男です</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/bro1.jpg" alt="兄弟写真">
+                <p>1996年3月11日生まれ</p>
+                <p>四人兄弟の次男です。写真は兄弟でボーリングに行く前に<br>テンションが上がって撮った写真です</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>大学生活</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/univ2.jpg" alt="大学生活">
+                <img class='image-resize' src="/media/univ1.jpg" alt="大学生活">
+                <p>2014年に大学に入学しました。</p>
+                <p>写真は大学2回生のときにサークル活動にて
+                    <br>ビラ配りをしているときの写真と卒業式です</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>建築学生生活</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/architect2.jpg" alt="建築模型1">
+                <img class='image-resize' src="/media/architect1.jpg" alt="建築模型2">
+                <img class='image-resize' src="/media/architect3.jpg" alt="建築模型3">
+                <p>建築学部にいました</p>
+                <p>ものづくりが好きで建築学部に入りました。<br>模型をつくったり理想の建築を構想することにわくわくしていました</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>サークル活動</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/yosakoi1.jpg" alt="よさこい1">
+                <img class='image-resize' src="/media/yosakoi2.jpg" alt="よさこい2">
+                <p>和風のダンスサークルにはいってました（よさこい）</p>
+                <p>100人以上が所属し、全国各地のお祭りにでていました<br>ここで過ごす時間が長かったので大切な友達もたくさんできました</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>たくさんのイベント</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/event1.jpg" alt="仮装大会">
+                <p>The・大学生なことをたくさんしてました</p>
+                <p>写真はハロウィンの仮装大会。ペアを作ってテーマを決めて当日見せ合うというものでした<br>僕はハリーポッターにでてくる「ドビー」になりました</p>
+                <p>翌年には僕は「pepper君」になってました</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>お酒も嗜みます</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/eat1.jpg" alt="お酒">
+                <p>ほどほどに嗜みます</p>
+                <p>筋トレが趣味なので一人で飲むことはありませんが、<br>気の知れた仲間と嗜むお酒の時間は大好きです</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>大好物・チャリ旅編</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/bycicle5.jpg" alt="自転車旅">
+                <p>大学へも自転車で行っていて自転車が好きでした</p>
+                <p>毎日往復で30kmほど走っていたのでじゃあ旅行もできるんじゃないかと思い、初めて企画した1人チャリ旅~to香川県直島です
+                    <br>直島には建築家・安藤忠雄が設計した美術館と草間彌生のアートがたくさんあり、ずっといってみたいと思っていました
+                    <br>ここから僕の周りでチャリ旅がブームになり、いろんなところへいくことになります。</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>大好物・チャリ旅編</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/bycicle4.jpg" alt="自転車旅">
+                <p>第2回・チャリ旅to彦根編です</p>
+                <p>4人で大阪に下宿していた彦根出身の友達の実家に行こうという企画でした<br>僕のチャリはまだいわゆるママチャリですね。よく走った最高の相棒でした</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>大好物・チャリ旅編</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/bycicle3.jpg" alt="自転車旅">
+                <p>第3回・チャリ旅to甲子園編です</p>
+                <p>目的はただなんとなく海が見たいというだけで甲子園のほうまで行った気がします。
+                    <br>この頃には僕もクロスバイクを購入してさらにチャリ旅が楽しくなりました</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal10" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>大好物・チャリ旅編</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/bycicle2.jpg" alt="自転車旅">
+                <p>第4回・チャリ旅to直島リターンズ</p>
+                <p>建築学部で同じゼミの友達に直島にチャリ旅をした話をしたら俺も行きたいとのことでまたいきました
+                    <br>今回は2人だったので気の向くままに寄り道したり、ドミトリーに泊まって料理したりと1人で行った時とは全く別の
+                    <br>体験ができました。直島は何度行ってもいいなと思いました</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal11" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>大好物・チャリ旅編</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/bycicle1.jpg" alt="自転車旅">
+                <p>第5回・チャリ旅to和歌山編です</p>
+                <p>大学生活の締めくくりとしてサークルで最も深い時間を過ごした仲間といきました
+                    <br>作ってる時に改めて見返してみると、1人で始めたチャリ旅がいろんな人を影響して最高の思い出をたくさんつくってくれたので
+                    <br>チャリ旅は僕の大学生活で切っても切り離せないものだなと思いました</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal12" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>弾丸ヒッチハイク</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/travel1.jpg" alt="ヒッチハイク">
+                <p>思いつきでヒッチハイクしました</p>
+                <p>なんで彦根？また友達の実家にいったの？もう覚えてません笑
+                    <br>でも写真があるということはいったんだと思います
+                    <br>いろんな背景のある方に助けていただいて無事辿り着くことができました</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal13" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>大自然・曽爾高原</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/travel4.jpg" alt="曽爾高原">
+                <p>奈良県の曽爾高原にいきました</p>
+                <p>見渡す限りの大自然で、こんな場所があるんだと驚いた記憶があります。
+                    <br>自転車以外でも色んなところへいってました</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal14" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>ゼミ旅行・博多へ</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/travel3.jpg" alt="博多屋台">
+                <p>博多屋台を体験できました。</p>
+                <p>教授もお酒が大好きなので、一応建築を見学する旅行ではあったんですが
+                    <br>屋台で食事をしている瞬間が一番楽しそうでした。
+                    <br>大阪から来たことを言うと隣の見知らぬ人が「これもおいしいから食べな」など言っていただき
+                    <br>人情味溢れる博多屋台はとても心地よかったです</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal15" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>初めての海外旅行</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/travel2.jpg" alt="タイ">
+                <p>大学生のうちに一度は海外へいってみたかったので中学からずっと友達とタイへいきました</p>
+                <p>お金があまりなかったのでバックパッカー旅行ということで
+                    <br>バックパッカーの聖地バンコク・アユタヤ・パタヤビーチ・カオサンロードへ
+                    <br>写真はアユタヤという遺跡が有名な地域で、RPGの中のような世界観にワクワクしました
+                    <br>海外旅行はアクシデントがつきものとは聞いていましたが、日本を出る前も現地でも
+                    <br>アクシデントだらけの旅行でしたが、いまではそれもいい思い出です。
+                    <br>文化が違う人たちと交流することは初めてだったのでいい体験ができました
+                    <br>また色んな国へいってみたいです</p>
+            </div>
+        </div>
+    </div>
+        
+    <div id="modal16" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>好きなもの編</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/love1.jpg" alt="いちご">
+                <p>いちごが大好きです</p>
+                <p>いちご味の食べ物も嫌いではないですが、
+                    <br>生のいちごには到底及びません</p>
+            </div>
+        </div>
+    </div>
+        
+    <div id="modal17" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>好きなもの編</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/love4.jpg" alt="花火">
+                <p>花火が大好きです</p>
+                <p>夏といえば、これ。
+                    <br>食べ物片手に、これ。
+                </p>
+            </div>
+        </div>
+    </div>
+        
+    <div id="modal18" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>好きなもの編</h1>
+                <span class="modalClose">×</span>
+            </div>
+            <div class="modal-body">
+                <img class='image-resize' src="/media/love3.jpg" alt="ライブ">
+                <p>音楽ライブも好きです</p>
+                <p>特定のバンドだけですが
+                    <br>そのバンドだけでも4回ほど参戦しています
+                    <br>なのでカラオケも好きです</p>
+            </div>
+        </div>
+    </div>
+        
+
+</div>
+
+{% endblock %}

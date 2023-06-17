@@ -1,0 +1,30 @@
+{% extends "registration/base.html" %}
+
+{% block main %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h3><a href = "{% url 'daily_create' %}">つぶやく</a></h3>
+      <h1>投稿一覧</h1>
+      <p>みんなのつぶやき</p>
+        {% for list in object_list %}
+        <div class ='card-container card'>
+        <h4>{{list.title}}</h4>
+        <p>{{list.content}}</p>
+        <p>{{list.created_at}}</p>
+        <p>
+
+            {% if list.author.profile %}
+            {{list.author.profile.name}}
+            {% else %}
+            匿名ユーザー
+            {% endif %}
+        </p>
+        </div>
+        {% endfor %}
+        
+    
+    </div>
+  </div>
+</div>
+{% endblock %}

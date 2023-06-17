@@ -1,0 +1,27 @@
+{% extends 'registration/base.html'%}
+
+{% block main %}
+
+
+<h2>会員ページ</h2>
+<!-- <p>こんにちは,{{user.username}}さん</p> -->
+<p>こんにちは,
+    {% if request.user.profile.name %}
+    {{request.user.profile.name}}さん
+    {% else %}
+    {{user.email}}さん
+    {% endif %}
+</p>
+
+<h2>ようこそりょうのマイページへ</h2>
+<p>IT業界への未経験転職を目標に毎日勉強中!!</p>
+<p>Python,Django,JavaScript,AWSを少しずつやってます。<br>これが終わったらJavaScriptをもっと学んで、ReactかVue.jsをやってみたい</p>
+<ul>
+    <li><a href="">Home</a></li>
+    <li><a href="{% url 'aboutme' %}">About me</a></li>
+    <li><a href="{% url 'daily_list' %}">Daily</a></li>
+    <li><a href="{% url 'contact_form' %}">Contact</a></li>
+</ul>
+<p><a href="{% url 'logout' %}">ログアウト</a></p>
+<p><a href="{% url 'password_change' %}">パスワードの変更</a></p>
+{% endblock %}

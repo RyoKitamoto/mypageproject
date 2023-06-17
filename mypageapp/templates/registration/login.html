@@ -1,0 +1,25 @@
+{% extends 'registration/base.html' %}
+{% block main %}
+
+<!-- ログインテンプレート -->
+<div class="container">
+    <div class="card card-container">
+        <h2>ようこそりょうのマイページへ！</h2>
+        <p>ログインするといろんなコンテンツが表示できます</p>
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        {% include 'registration/_form.html' with submit_label='ログイン' %}
+
+        <ul>
+            <li><a href="{% url 'password_reset' %}" class="forgot-password">
+                パスワードを忘れた方はこちら
+            </a></li>
+            <li><a href="{% url 'signup' %}" class="forgot-password">
+                新規登録はこちらから
+            </a></li>
+        </ul>
+    </div><!-- /card-container -->
+</div><!-- /container -->
+
+{% endblock %}
+

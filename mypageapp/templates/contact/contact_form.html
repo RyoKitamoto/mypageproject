@@ -1,0 +1,15 @@
+{% extends "registration/base.html" %}
+
+{% block main %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>お問い合わせ</h1>
+      <p>お問い合わせフォームです。</p>
+      {% include 'registration/_form.html' with submit_label='お問い合わせを送信する' %}
+
+    
+    </div>
+  </div>
+</div>
+{% endblock %}

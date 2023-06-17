@@ -1,0 +1,12 @@
+{% extends 'registration/base.html' %}
+{% block main %}
+{% if result %}
+    <h2>認証成功しました</h2>
+    <p>ようこそりょうのマイページへ下記リンクからログインしてください</p>
+    <a href="{% url 'login' %}">ログイン</a>
+{% else %}
+    <h2>認証に失敗しました</h2>
+    <p>お手数ですが、もう一度登録しなおしてください</p>
+{% endif %}
+{% endblock %}
+
